@@ -54,4 +54,18 @@ const factorialOfNum = function(num) {
     return factorial;
 }
 
-console.log(`Factorial of number = ${factorialOfNum(3)}`);
+console.log(`Factorial of number = ${factorialOfNum(20)}`);
+
+
+// count trailing zeros
+
+const countTrailingZeros = function(num) {
+    let total = 0;
+    for(let i = 5; i<=num; i*=5) {
+        total = total + (num/i);
+    }
+
+    return total;
+}
+
+console.log(`Number of trailing zeros in factorial = ${countTrailingZeros(125)}`);
