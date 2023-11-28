@@ -20,3 +20,21 @@ const numOfDigits = function(num) {
 }
 
 console.log(numOfDigits(19999999999999999999999999000000000000000000000000000000000000000000000000000000000000000000000000001));
+
+
+// Palindrome of not 
+
+// normal way - Time complexity - Theta(num of digits)
+
+const palindromeOrNot = function(num) {
+    let new_num = 0;
+    const old_num = num;
+    while(num) {
+        new_num = new_num * 10 + num%10;
+        num = Math.trunc(num / 10);
+    }
+
+    return old_num === new_num;
+}
+
+console.log(palindromeOrNot(252));
