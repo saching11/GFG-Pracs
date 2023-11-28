@@ -24,7 +24,7 @@ console.log(numOfDigits(19999999999999999999999999000000000000000000000000000000
 
 // Palindrome of not 
 
-// normal way - Time complexity - Theta(num of digits)
+// normal way as well as efficient one - Time complexity - Theta(num of digits)
 
 const palindromeOrNot = function(num) {
     let new_num = 0;
@@ -38,3 +38,20 @@ const palindromeOrNot = function(num) {
 }
 
 console.log(palindromeOrNot(252));
+
+// Factorial of number
+
+// normal way - Time Complexity - O(n)
+
+const factorialOfNum = function(num) {
+    
+    let factorial = 1
+    while(num > 1) {
+        factorial= factorial * num;
+        num--;
+    }
+
+    return factorial;
+}
+
+console.log(`Factorial of number = ${factorialOfNum(3)}`);
