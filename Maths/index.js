@@ -118,4 +118,11 @@ const lcm = function(num1, num2) {
     return lcm;
 }
 
-console.log(`LCM = ${lcm(12, 15)}`);
+// LCM optimized - a*b = gcd(a.b) * lcm(a,b)
+
+const oLCM = function(num1, num2) {
+    return (a*b)/eGCD(num1, num2);
+}
+
+console.log(`LCM = ${lcm(125, 115)}`);
+console.log(`oLCM = ${lcm(125, 115)}`);
