@@ -71,7 +71,7 @@ const countTrailingZeros = function(num) {
 console.log(`Number of trailing zeros in factorial = ${countTrailingZeros(125)}`);
 
 
-// GCD normal way
+// GCD normal way - O(min(a,b))
 
 const gcd = function(num1, num2) {
     let largest_num = 1;
@@ -88,4 +88,16 @@ const gcd = function(num1, num2) {
     return largest_num;
 }
 
-console.log(`GCD = ${gcd(2,3)}`);
+// Using Euclidian Algorithm Optimized - O(log n)
+
+const eGCD = function(num1, num2) {
+    if(num2 == 0) {
+        return num1;
+    }
+
+    return gcd(num2, num1%num2);
+
+}
+
+console.log(`GCD = ${gcd(100,200)}`);
+console.log(`eGCD = ${gcd(100,200)}`);
