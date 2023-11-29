@@ -99,5 +99,23 @@ const eGCD = function(num1, num2) {
 
 }
 
-console.log(`GCD = ${gcd(100,200)}`);
+console.log(`GCD = ${gcd(12,15)}`);
 console.log(`eGCD = ${gcd(100,200)}`);
+
+
+// LCM normal method
+
+const lcm = function(num1, num2) {
+    let lcm = Math.max(num1, num2);
+
+    for(let i = lcm; i <= num1*num2; i++) {
+        if(i%num1 ==0 && i%num2 ==0) {
+            lcm = i;
+            return lcm;
+        }
+    }
+
+    return lcm;
+}
+
+console.log(`LCM = ${lcm(12, 15)}`);
