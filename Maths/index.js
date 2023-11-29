@@ -69,3 +69,23 @@ const countTrailingZeros = function(num) {
 }
 
 console.log(`Number of trailing zeros in factorial = ${countTrailingZeros(125)}`);
+
+
+// GCD normal way
+
+const gcd = function(num1, num2) {
+    let largest_num = 1;
+    let min = num1;
+    if(num1>num2) {
+        min = num2;
+    }
+    for(let i = 2; i<=min; i++) {
+        if(num1%i == 0 && num2%i ==0) {
+            largest_num = i;
+        }
+    }
+
+    return largest_num;
+}
+
+console.log(`GCD = ${gcd(2,3)}`);
