@@ -126,3 +126,4 @@ const oLCM = function(num1, num2) {
 
 console.log(`LCM = ${lcm(125, 115)}`);
 console.log(`oLCM = ${lcm(125, 115)}`);
+
